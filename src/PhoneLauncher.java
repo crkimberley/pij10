@@ -8,10 +8,8 @@ public class PhoneLauncher {
     }
 
     private void launch() {
-        SmartPhone smartPhone = new SmartPhone();
-
+        SmartPhone smartPhone = new SmartPhone("Apple");
         smartPhone.ringAlarm("Get up!");
-
         smartPhone.playGame("Tetris");
 
         smartPhone.call("1001");
@@ -24,28 +22,27 @@ public class PhoneLauncher {
         smartPhone.call("1008");
         smartPhone.call("1009");
         smartPhone.call("1010");
-
         smartPhone.printLastNumbers();
-
         smartPhone.call("1011");
-
         smartPhone.printLastNumbers();
-
         smartPhone.call("1012");
-
         smartPhone.printLastNumbers();
 
         smartPhone.browseWeb("www.happypigs.com");
-
         System.out.println(smartPhone.findPosition());
 
         smartPhone.call("0013");
-
         smartPhone.printLastNumbers();
-
         smartPhone.call("1014");
         smartPhone.call("0015");
-
         smartPhone.printLastNumbers();
+
+        System.out.println(smartPhone.getBrand());
+
+        RestrictedSmartPhone restrictedSmartPhone = new RestrictedSmartPhone("Samsung");
+        System.out.println(restrictedSmartPhone.getBrand());
+        restrictedSmartPhone.call("2001");
+        restrictedSmartPhone.call("0002");
+        restrictedSmartPhone.playGame("Space Invaders");
     }
 }

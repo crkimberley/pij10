@@ -6,6 +6,10 @@ public class MobilePhone extends OldPhone {
     private String[] lastNumbers = new String[SIZE_OF_LAST_NUMBERS];
     private int callCounter = 0;
 
+    public MobilePhone(String brand) {
+        super(brand);
+    }
+
     @Override
     public void call(String number) {
         super.call(number);
@@ -16,7 +20,7 @@ public class MobilePhone extends OldPhone {
         System.out.println("ALARM: " + alarm);
     }
 
-    public void playGame(String game) {
+    void playGame(String game) {
         System.out.println("Playing: " + game);
     }
 
