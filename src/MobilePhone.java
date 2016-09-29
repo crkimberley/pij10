@@ -14,19 +14,20 @@ public class MobilePhone extends OldPhone {
     }
 
     public void ringAlarm(String alarm) {
-        System.out.println(alarm);
+        System.out.println("ALARM: " + alarm);
     }
 
     public void playGame(String game) {
-        System.out.println("Playing " + game);
+        System.out.println("Playing: " + game);
     }
 
     public void printLastNumbers() {
         System.out.print("Last " + SIZE_OF_LAST_NUMBERS + " numbers called: ");
         int i = callCounter;
         do {
-            System.out.println(lastNumbers[i]);
+            System.out.print(lastNumbers[i] + "  ");
             i = (i + 1) % SIZE_OF_LAST_NUMBERS;
         } while (i != callCounter);
+        System.out.println();
     }
 }
