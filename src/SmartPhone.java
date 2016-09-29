@@ -10,4 +10,13 @@ public class SmartPhone extends MobilePhone {
     public String findPosition() {
         return "Position: London, WC1";
     }
+
+    public void call(String number) {
+        if (number.substring(0,2).equals("00")) {
+            System.out.println("Calling: " + number + " through the internet to save money");
+            storeNumberCalledAndIncrementCallCounter(number);
+        } else {
+            super.call(number);
+        }
+    }
 }

@@ -38,5 +38,14 @@ public class PhoneLauncher {
         smartPhone.browseWeb("www.happypigs.com");
 
         System.out.println(smartPhone.findPosition());
+
+        smartPhone.call("0013");
+
+        smartPhone.printLastNumbers();
+
+        smartPhone.call("1014");
+        smartPhone.call("0015");
+
+        smartPhone.printLastNumbers();
     }
 }

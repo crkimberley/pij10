@@ -9,8 +9,7 @@ public class MobilePhone extends OldPhone {
     @Override
     public void call(String number) {
         super.call(number);
-        lastNumbers[callCounter] = number;
-        callCounter = (callCounter + 1) % SIZE_OF_LAST_NUMBERS;
+        storeNumberCalledAndIncrementCallCounter(number);
     }
 
     public void ringAlarm(String alarm) {
@@ -29,5 +28,10 @@ public class MobilePhone extends OldPhone {
             i = (i + 1) % SIZE_OF_LAST_NUMBERS;
         } while (i != callCounter);
         System.out.println();
+    }
+
+    public void storeNumberCalledAndIncrementCallCounter(String number) {
+        lastNumbers[callCounter] = number;
+        callCounter = (callCounter + 1) % SIZE_OF_LAST_NUMBERS;
     }
 }
